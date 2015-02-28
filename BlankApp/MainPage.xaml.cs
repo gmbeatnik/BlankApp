@@ -25,7 +25,18 @@ namespace BlankApp
         public MainPage()
         {
             this.InitializeComponent();
-           //GMWV1.Source = Convert."http://www.cnn.com"
+          //  GMWV1.NavigateToString("http://www.cnn.com");
+            try
+            {
+                string url = "http://www.malpaistech.com";
+                Uri targetUri = new Uri(url);
+                GMWV1.Navigate(targetUri);
+            }
+            catch (FormatException myE)
+            {
+                // Bad address
+                GMWV1.NavigateToString(String.Format("<h1>Address is invalid, try again.  Details --> {0}.</h1>", myE.Message));
+            }
         }
 
         private void GMWV1_LoadCompleted(object sender, NavigationEventArgs e)
