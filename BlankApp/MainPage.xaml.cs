@@ -25,6 +25,12 @@ namespace BlankApp
         public MainPage()
         {
             this.InitializeComponent();
+           //GMWV1.Source = Convert."http://www.cnn.com"
+        }
+
+        private void GMWV1_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            
         }
     }
 }
