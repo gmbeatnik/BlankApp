@@ -31,6 +31,7 @@ namespace BlankApp
                 string url = "http://www.malpaistech.com";
                 Uri targetUri = new Uri(url);
                 GMWV1.Navigate(targetUri);
+                //yes!
             }
             catch (FormatException myE)
             {
